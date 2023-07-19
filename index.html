@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap" rel="stylesheet">
+  <script src="./src/js/main.js" defer></script>
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+<body>
+  <header class="container">
+    <!-- nav -->
+    <nav class="primary__nav flex">
+      <div class="primary__nav--mobile flex">
+        <img src="./assets/shared/desktop/logo.svg" alt="coffee roaster logo">
+        <button class="toggle__nav"></button>
+      </div>
+
+      <ul class="primary__nav--list flex">
+        <li class="ff-barlow fs-300 text-grey uppercase"><a href="#" class="text-grey">Home</a></li>
+        <li class="ff-barlow fs-300 text-grey uppercase"><a href="./about.html" class="text-grey">About us</a></li>
+        <li class="ff-barlow fs-300 text-grey uppercase"><a href="./plan.html" class="text-grey">Create your plan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="home container page-flow">
+
+    <section class="hero grid">
+      <div class="hero__img">
+        <picture>
+          <source media="(min-width:60rem)" srcset="./assets/home/desktop/image-hero-coffeepress.jpg">
+          <source media="(min-width:42rem)" srcset="./assets/home/tablet/image-hero-coffeepress.jpg">
+          <img src="./assets/home/mobile/image-hero-coffeepress.jpg" alt="coffeepress" class="border-radius">
+        </picture>
+      </div>
+      
+      <div class="hero__information container flow">
+        <h1 class="ff-fraunces fs-800 text-cream">Great coffee made simple.</h1>
+        <p class="ff-barlow fs-400 text-cream"> Start your mornings with the world’s best coffees. Try our expertly curated artisan 
+          coffees from our best roasters delivered directly to your door, at your schedule.
+        </p>
+        <div class="hero__button">
+          <a href="./plan.html" class="button fs-button bg-darkCyan text-cream">Create your plan</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection container flow-medium">
+      <div class="flow">
+        <p class="collection__background ff-fraunces   ">our collection</p>
+      </div>
+
+      <div class="collection__wrapper flow-medium">
+        <div class="product flow">
+          <img src="./assets/home/desktop/image-gran-espresso.png" alt="espresso beans">
+          <div class="flow">
+            <h3 class="ff-fraunces fs-500-static text-greyBlue">Gran Espresso</h3>
+            <p class="ff-barlow fs-400 text-greyBlue">Light and flavorful blend with cocoa and black pepper for an intense experience</p>
+          </div>
+        </div>
+
+        <div class="product flow">
+          <img src="./assets/home/desktop/image-planalto.png" alt="planalto beans">
+          <div class="flow">
+            <h3 class="ff-fraunces fs-500-static text-greyBlue">Planalto</h3>
+            <p class="ff-barlow fs-400 text-greyBlue">Brazilian dark roast with rich and velvety body, and hints of fruits and nuts</p>
+          </div>
+        </div>
+
+        <div class="product flow">
+          <img src="./assets/home/desktop/image-piccollo.png" alt="picollo beans">
+          <div class="flow">
+            <h3 class="ff-fraunces fs-500-static text-greyBlue">Picollo</h3>
+            <p class="ff-barlow fs-400 text-greyBlue">Mild and smooth blend featuring notes of toasted almond and dried cherry</p>
+          </div>
+        </div>
+
+        <div class="product flow">
+          <img src="./assets/home/desktop/image-danche.png" alt="danche beans">
+          <div class="flow">
+            <h3 class="ff-fraunces fs-500-static text-greyBlue">Danche</h3>
+            <p class="ff-barlow fs-400 text-greyBlue">Ethiopian hand-harvested blend densely packed with vibrant fruit notes</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="biography ">
+      <div class="biography__background bg-darkBlue border-radius">
+        <div class="biography__information container flow">
+          <h2 class="ff-fraunces fs-600 text-cream">Why choose us?</h2>
+          <p class="ff-barlow fs-400-lighter text-cream ">A large part of our role is choosing which particular coffees will be featured 
+            in our range. This means working closely with the best coffee growers to give 
+            you a more impactful experience on every level.
+          </p>
+        </div>
+      </div>
+
+      <div class="biography__card--wrapper container flex flow">
+
+        <div class="biography__card bg-darkCyan border-radius">
+          <div class="grid container flow-medium">
+            <img src="./assets/home/desktop/icon-coffee-bean.svg" alt="coffe bean">
+            <div class="biography__card--information  flow">
+              <h3 class="ff-fraunces fs-500-static text-cream">Best quality</h3>
+              <p class="ff-barlow fs-400-lighter text-cream">Discover an endless variety of the world’s best artisan coffee from each of our roasters.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="biography__card bg-darkCyan border-radius">
+          <div class="grid container flow-medium">
+            <img src="./assets/home/desktop/icon-gift.svg" alt="gift">
+            <div class="biography__card--information flow">
+              <h3 class="ff-fraunces fs-500-static text-cream">Exclusive benefits</h3>
+              <p class="ff-barlow fs-400-lighter text-cream">Special offers and swag when you subscribe, including 30% off your first shipment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="biography__card bg-darkCyan border-radius">
+          <div class="grid container flow-medium">
+            <img class="biography__truck" src="./assets/home/desktop/icon-truck.svg" alt="truck">
+            <div class="biography__card--information flow">
+              <h3 class="ff-fraunces fs-500-static text-cream">Free shipping</h3>
+              <p class="ff-barlow fs-400-lighter text-cream">We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </section>
+
+    <section class="tutorial flow-medium container">
+      <h2 class="ff-fraunces text-grey fs-500-static">How it works</h2>
+
+      <div class="tutorial__column--wrapper flex">
+        <div class="col flow">
+          <div class="tutorial__art"></div>
+          <h2 class="ff-fraunces fs-900 text-orange">01</h2>
+          <h3 class="ff-fraunces fs-600-lighter">Pick your coffee</h3>
+          <p class="ff-barlow fs-400-lighter text-greyBlue">Select from our evolving range of artisan coffees. Our beans are ethically
+            sourced and we pay fair prices for them. There are new coffees in all profiles
+            every month for you to try out.
+          </p>
+        </div>
+
+        <div class="col flow">
+          <div class="tutorial__art"></div>
+          <h2 class="ff-fraunces fs-900 text-orange">02</h2>
+          <h3 class="ff-fraunces fs-600-lighter">Choose the frequency</h3>
+          <p class="ff-barlow fs-400-lighter text-greyBlue">Customize your order frequency, quantity, even your roast style and grind type. 
+            Pause, skip or cancel your subscription with no commitment through our online portal.
+          </p>
+        </div>
+
+        <div class="col flow">
+          <div class="tutorial__art--noline"></div>
+          <h2 class="ff-fraunces fs-900 text-orange">03</h2>
+          <h3 class="ff-fraunces fs-600-lighter">Receive and enjoy!</h3>
+          <p class="ff-barlow fs-400-lighter text-greyBlue">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning 
+            world-class coffees curated to provide a distinct tasting experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="tutorial__button">
+        <a href="./plan.html" class="button fs-button bg-darkCyan text-cream">Create your plan</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-darkBlue container">
+       <!-- nav -->
+         <div class="container">
+           <nav class="secondary__nav flex flow">
+              <div class="secondary__nav--primary flex">
+                <img src="./assets/shared/desktop/logo-white.svg" alt="coffee roaster logo">
+                <ul class="flow">
+                  <li class="ff-barlow fs-300 text-grey uppercase"><a href="#" class="text-grey">Home</a></li>
+                  <li class="ff-barlow fs-300 text-grey uppercase"><a href="./about.html" class="text-grey">About us</a></li>
+                  <li class="ff-barlow fs-300 text-grey uppercase"><a href="./plan.html" class="text-grey">Create your plan</a></li>
+                </ul>
+              </div>
+              <div class="socials flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#FEFCF7" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path fill="#FEFCF7" d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#FEFCF7" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+            </nav>
+         </div>
+  </footer>
+</body>
+</html>

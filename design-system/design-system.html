@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap" rel="stylesheet">
+    <script src="../src/js/main.js" defer></script>
+    <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+<body class=" grid container" style="place-items: center;">
+
+    <!-- normal button -->
+    <div>
+        <button class="button fs-button bg-darkCyan text-cream">Create your plan</button>
+    </div>
+    <!-- order button -->
+    <div>
+        <button aria-selected="false" class="order-button button fs-button bg-darkCyan text-cream">Create your plan</button>
+    </div>
+
+
+
+
+    <div class="accordion flow">
+        <div aria-selected="false" class="accordion__title flex">
+            <h2 class="fs-500 ff-fraunces text-black">How do you drink your coffee?</h2>
+            <button aria-selected="false" class="arrow-button"></button>
+        </div>
+     
+        <div class="preferences card__wrapper flex" id="preferences">
+            <div aria-selected="false" aria-label="preferences" class="card bg-darkCream ff-fraunces" id="Capsules">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Capsules</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm
+                    </p>
+                </div>
+            </div>
+            <div aria-selected="false" aria-label="preferences" class="card bg-darkCream ff-fraunces" id="Filter">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Filter</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm
+                    </p>
+                </div>
+            </div>
+            <div aria-selected="false" aria-label="preferences" class="card bg-darkCream ff-fraunces" id="Expresso">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Expresso</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="accordion flow">
+        <div aria-selected="false" class="accordion__title flex">
+            <h2 class="fs-500 ff-fraunces text-black">How do you drink your coffee?</h2>
+            <button aria-selected="false" class="arrow-button"></button>
+        </div>
+     
+        <div class="type card__wrapper flex" id="type">
+            <div aria-selected="false" aria-label="type" class="card bg-darkCream ff-fraunces" id="anus">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Option</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm
+                    </p>
+                </div>
+            </div>
+            <div aria-selected="false" aria-label="type" class="card bg-darkCream ff-fraunces">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Option</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm
+                    </p>
+                </div>
+            </div>
+            <div aria-selected="false" aria-label="type" class="card bg-darkCream ff-fraunces">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Option</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="order__summary bg-darkBlue">
+        <div class="container flow">
+            <p class="ff-barlow text-white">order summary</p>
+            <h2 class="order text-white ff-fraunces fs-500-static">“I drink my coffee as <span>_____</span>, with a <span>_____</span> type of bean.
+                <span>_____</span> ground ala <span>_____</span>, sent to me <span>_____</span>.”</h2>
+        </div>
+    </div>
+
+
+</body>
+</html>

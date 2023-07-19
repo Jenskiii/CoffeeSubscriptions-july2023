@@ -1,0 +1,24 @@
+// media query
+@mixin smallButton {
+        display: block;
+        z-index: 2000;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        transition: transform 250ms linear;
+        &[aria-selected="true"]{
+            transform: rotate(180deg);
+        }
+}
+
+@mixin tutorialCircle{
+        width: 2rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: solid 3px hsl(var(--clr-darkCyan));
+        background-color: white;
+}

@@ -1,0 +1,77 @@
+@use '../abstracts' as *;
+
+.accordion__title{
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        width: 80%;
+    }
+
+    &[aria-selected="false"]{
+        h2{
+           color: hsl(var(--clr-grey));
+        }
+    }
+
+    &:hover,&:active{
+        .arrow-button{
+            background-image: url(../../../assets/plan/desktop/icon-arrow-hover.svg);
+        }
+    }
+    & + .card__wrapper{
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 400ms ease-in, opacity 400ms ease-in;
+    }
+
+    &.is-open + .card__wrapper{
+        opacity: 1;
+        height: auto;
+    }
+}
+
+
+.card{
+    border-radius: .5rem;
+    --container:85%;
+    cursor: pointer;
+    transition: color 250ms linear,background-color 250ms linear;
+// changes color when selected
+    &[aria-selected="true"]{
+        background-color: hsl(var(--clr-darkCyan));
+       
+        p,h3{
+            color: hsl(var(--clr-white));
+        }   
+    }
+    &:hover,&:active{
+        background-color: hsl(var(--clr-paleOrange));
+    }
+}
+
+
+@media(max-width:$br-small){
+    .card__wrapper{
+     flex-direction: column;
+    }
+
+    .card__text{
+        --flow-space:3px;
+        padding-block: 24px;
+    p{
+        max-width: 30ch;
+    }       
+    }
+ }
+
+ @media(min-width:$br-medium){
+    .card{
+        max-width: 228px;
+    }
+    .card__text{
+        padding-block: 32px 84px;
+    }
+
+}

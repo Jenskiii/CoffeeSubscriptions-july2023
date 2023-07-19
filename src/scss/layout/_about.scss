@@ -1,0 +1,141 @@
+@use '../abstracts' as *;
+
+/////////////////
+//    hero    //
+///////////////
+@media(min-width: $br-small){
+    .about{
+        .hero__information{
+            p{
+                max-width: 48ch;
+            }
+
+
+        }
+    }
+}
+/////////////////
+// commitment //
+///////////////
+.commitment{
+    // add space between commitment + quality
+    // because of transform on quality img
+    padding-bottom: 80px;
+    text-align: center;
+    .flex{
+        flex-direction: column;
+    } 
+
+    @media (min-width: $br-small){
+        &{
+            text-align: left;
+        }
+        .flex{
+            flex-direction: row;
+            --gap:4rem;
+        }
+
+        .col{
+            width: 50%;
+            img{
+                height: 110%;
+            }
+        }
+
+        .commitment__information{
+            width: 60%;
+        }
+    }
+
+    @media (min-width: $br-medium){
+        &{
+            width: 85%;
+            margin-inline: auto;
+        }
+
+        .flex{
+            --gap:1rem;
+        }
+        .col{
+            width: 50%;
+            img{
+                width: 80%;
+                height: 100%;
+            }
+        }
+
+        .commitment__information{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 48%;
+        }
+    }
+}
+/////////////////
+//  quality   //
+///////////////
+.quality{
+    text-align: center;
+    place-items: center;
+    position: relative;
+}
+
+.quality__img{
+    position: absolute;  
+    left: 5%;
+    translate: 0 -50%;
+    max-height: 320px;
+}
+
+.quality__information{
+    padding-block:140px 60px;
+
+    p{
+        opacity: .8;  
+    }
+}
+    @media (min-width: $br-small){
+        .quality{
+            p{
+                margin-inline: auto;
+                max-width: 63.5ch;
+            } 
+        }
+
+        .quality__img{
+            width: 90%;
+        }
+
+        .quality__information{
+            padding-block:220px 60px;
+        }
+}
+    
+@media (min-width: $br-big){
+    .quality{
+        text-align: left;
+
+        p{
+            margin-inline: 0;
+            width: 59ch;
+        }
+    }
+
+    .quality__img{
+        left: 0;
+        right: -50%;
+        translate: 0 -20%;
+        max-width: 445px;
+        min-height: 475px;
+    }
+    .quality__information{
+        z-index: 3;
+        padding-block:84px 170px;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,7 @@
+@import '../abstracts/mixins';
+
+.arrow-button{
+    @include smallButton;
+    background-image: url(../../../assets/plan/desktop/icon-arrow.svg);
+}
+

@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+.tutorial__art{
+    @include tutorialCircle;
+    
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        background: hsl(var(--clr-paleOrange));
+        height: 3px;
+        width: 28%;
+        max-width: 450px;
+        transform: translateX(5px);
+        transform: translateY(10px);
+        z-index: -1;
+    }
+}
+
+.tutorial__art--noline{
+    @include tutorialCircle;
+}
+
+@media(max-width:$br-small){
+    .tutorial__art,
+    .tutorial__art--noline{
+        display: none;
+    }
+}

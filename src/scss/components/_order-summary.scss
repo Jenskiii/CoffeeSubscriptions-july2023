@@ -1,0 +1,13 @@
+.order__summary{
+    padding-block:32px 28px ;
+    border-radius: 8px;
+    text-align: left;
+    width: 100%;
+    p{
+        text-transform: uppercase;
+        opacity: .5;
+    }
+    span{
+        color: hsl(var(--clr-darkCyan));
+    }
+}

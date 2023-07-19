@@ -1,0 +1,335 @@
+@use '../abstracts' as *;
+
+/////////////////
+//    hero    //
+///////////////
+.hero{
+    position: relative;
+    text-align: center;
+    img{
+        width: 100%;
+    }
+
+    @media(max-width: $br-small){
+        img{
+            max-height: 31.25rem;
+        }
+    }
+}
+
+.hero__information{
+        place-self: center;
+        text-align: center;
+        position: absolute;
+        
+        h1{
+            margin-inline: auto;
+            max-width: 10ch;
+        }
+    
+        p{
+            margin-inline: auto;
+            max-width: 32ch;
+            opacity: .8;
+        }
+    }
+    .hero__button{
+        margin-top: 38px;
+}
+
+@media(min-width: $br-small){
+    .hero__information{
+        text-align: left;
+
+        h1{
+            margin-inline: 0;
+            max-width: 10ch;
+        }
+    
+        p{
+            margin-inline: 0;
+            max-width: 45ch;
+        }
+    }
+  
+    .hero__button{
+        margin-top: 52px;
+    }
+}
+
+
+
+
+// prevents img from changing position
+.hero:not.hero__img{
+    place-items: center;
+}
+/////////////////
+// collection //
+///////////////
+.collection{
+    width: 100%;
+    text-align: center;
+    img{
+        max-width: 12.5rem;
+        margin-inline: auto;
+    }
+    p,h3{
+        max-width: 35ch;
+        margin-inline: auto;
+    }
+}
+// text gradient
+.collection__background{
+        font-size: min(12vw,12rem);
+        max-width: 1440px;
+        background: -webkit-linear-gradient(90deg,hsl(var(--clr-cream)), hsl(var(--clr-grey)));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+@media(min-width:$br-small){
+    .collection{
+        text-align: left;
+        img{
+            max-width: 15.9375rem;
+        }
+    }
+
+    .collection__background{
+        text-align: center;
+        width: 100%;
+        transform: translateY(95px);
+    }
+
+    .collection__wrapper{
+        position: relative;
+        display: grid;
+        place-items: center;
+        z-index: 5;
+    }
+
+    .product{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        div{
+            width: 100%;
+        }
+
+        p{
+            margin-inline: 0;
+        }
+    }
+}
+
+@media(min-width:$br-big){
+    .collection{
+        text-align: center;
+    }
+
+    .collection__background{
+        transform: translateY(150px);
+    }
+
+    .collection__wrapper{
+        grid-auto-flow: column;
+    }
+
+    .product{
+        display: flex;
+        flex-direction: column;
+        --flowMedium-space:0;
+        img{
+            max-width: 16rem;
+        }
+
+        p{  
+            max-width: 25ch;
+        }
+    }
+}
+
+/////////////////
+// biography  //
+///////////////
+.biography{
+    height: 93.4375rem;
+}
+
+.biography__background{
+    text-align: center;
+    height: 56.3745rem;
+}
+
+.biography__information{
+    padding-top: 64px;
+    p{
+        opacity: .8;
+    }
+}
+
+.biography__card--wrapper{
+    transform: translateY(-38rem);
+    flex-direction: column;
+    --gap:1.5rem;
+}
+
+.biography__card{
+    --flowMedium-space:2rem;
+    padding-block:70px 50px;
+    .grid{
+        place-items: center;
+        text-align: center;
+    }
+}
+
+.biography__card--information{
+    --flow-space:1.5rem;
+    p{
+        max-width: 25ch;
+    }
+}
+
+@media(min-width: $br-small){
+    .biography{
+        height: 55.5rem;
+    }
+    
+    .biography__background{
+        height: 35.8rem;
+    }
+
+
+    .biography__information{
+        max-width: 62ch;
+    }
+
+    .biography__card--wrapper{
+        transform: translateY(-19rem);
+        --container:80%;
+    }
+
+    .biography__card{
+        padding-block:0 40px;
+        .grid{
+            grid-auto-flow: column;
+            text-align: left;
+            img{
+                padding-top: 36px;
+            }
+            p{
+                max-width: 44ch;
+            }
+    }
+}
+}
+
+@media(min-width: $br-medium){
+    .biography{
+        height: 44.8rem;
+    }
+
+    .biography__information{
+        padding-top: 100px;
+        --flow-space:2.5rem;
+        max-width: 65ch;
+    }
+    
+    .biography__card--wrapper{
+        justify-content: center;
+        flex-direction: row;
+        transform: translateY(-14.5rem);
+        --container:90%;
+    }
+
+    .biography__card{
+        --flow-space:0;
+        padding-block:0 40px;
+        width: 33%;
+        .grid{
+            grid-auto-flow: row;
+            text-align: center;
+            img{
+                padding-top: 70px;
+            }
+            p{
+                max-width: 28ch;
+            }
+
+            .biography__truck{
+                padding-bottom: 23px;
+            }
+    }
+}
+}
+
+/////////////////
+//  tutorial  //
+///////////////
+
+.tutorial{
+    text-align: center;
+    --flowMedium-space:4rem;
+
+    h2{
+        font-weight: 900;
+    }
+    p{
+        margin-inline: auto;
+        max-width: 39ch;
+    }
+    .tutorial__button{
+        margin-top: 5.8125rem;
+    }
+}
+
+.tutorial__column--wrapper{
+    flex-direction: column;
+    --gap:3rem;
+}
+
+@media (min-width: $br-small){
+    .tutorial{
+        text-align: left;
+
+        p{
+            margin-inline: 0;
+        }
+    }
+    .tutorial__column--wrapper{
+        flex-direction: row;
+        --gap:1.5rem;
+        
+        .col{
+          width: calc(100%/3);
+          --flow-space:2.5rem;
+        }
+        h3{
+            max-width: 10ch;
+        }
+        p{
+            max-width: 31.5ch;
+        }
+
+        @media (min-width: $br-medium){
+            &{
+                --gap:2rem;
+            }
+    
+        }
+        
+    }
+}
+
+
+
+
+/////////////////
+//   footer   //
+///////////////
+
+footer{
+    margin-block: 7.5rem 72px;
+}
