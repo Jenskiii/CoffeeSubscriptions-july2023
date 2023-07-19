@@ -905,6 +905,9 @@ footer {
 }
 
 @media (min-width: 42rem) {
+  .quality {
+    margin-top: 15rem;
+  }
   .quality p {
     margin-inline: auto;
     max-width: 63.5ch;
@@ -918,6 +921,7 @@ footer {
 }
 @media (min-width: 68.75rem) {
   .quality {
+    margin-top: 10rem;
     text-align: left;
   }
   .quality p {

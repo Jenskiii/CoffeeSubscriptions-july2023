@@ -97,6 +97,7 @@
 }
     @media (min-width: $br-small){
         .quality{
+            margin-top: 15rem;
             p{
                 margin-inline: auto;
                 max-width: 63.5ch;
@@ -114,6 +115,7 @@
     
 @media (min-width: $br-big){
     .quality{
+        margin-top: 10rem;
         text-align: left;
 
         p{
