@@ -811,6 +811,7 @@ nav a {
 @media (min-width: 60rem) {
   .biography {
     height: 44.8rem;
+    margin-bottom: 15rem;
   }
   .biography__information {
     padding-top: 100px;
