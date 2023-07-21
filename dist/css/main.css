@@ -40,6 +40,10 @@
   color: hsl(var(--clr-darkCyan));
 }
 
+.bg-cream {
+  background-color: hsl(var(--clr-cream));
+}
+
 .bg-darkCream {
   background-color: hsl(var(--clr-darkCream));
 }
