@@ -1,122 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap" rel="stylesheet">
   <script src="./src/js/main.js" defer></script>
+  <script src="./src/js/plan.js" defer></script>
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
-
 <body>
+  <header class="container">
+    <!-- nav -->
+    <nav class="primary__nav flex">
+      <div class="primary__nav--mobile flex">
+        <img src="./assets/shared/desktop/logo.svg" alt="coffee roaster logo">
+        <button class="toggle__nav"></button>
+      </div>
 
-  <main class="plan"></main>
-  Home
-  About us
-  Create your plan
+      <ul class="primary__nav--list flex">
+        <li class="ff-barlow fs-300 text-grey uppercase"><a href="./index.html" class="text-grey">Home</a></li>
+        <li class="ff-barlow fs-300 text-grey uppercase"><a href="./about.html" class="text-grey">About us</a></li>
+        <li class="ff-barlow fs-300 text-grey uppercase"><a href="#" class="text-grey">Create your plan</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  Create a plan
-  Build a subscription plan that best fits your needs. We offer an assortment of the best 
-  artisan coffees from around the globe delivered fresh to your door.
+  <main class="plan page-flow">
+    <section class="hero grid container">
+      <div class="hero__img">
+        <picture>
+          <source media="(min-width:60rem)" srcset="./assets/plan/desktop/image-hero-blackcup.jpg">
+          <source media="(min-width:42rem)" srcset="./assets/plan/tablet/image-hero-blackcup.jpg">
+          <img src="./assets/plan/mobile/image-hero-blackcup.jpg" alt="coffeepress" class="border-radius">
+        </picture>
+      </div>
+      
+      <div class="hero__information container flow">
+        <h1 class="ff-fraunces fs-800 text-cream">Create a plan</h1>
+        <p class="ff-barlow fs-400 text-cream">Build a subscription plan that best fits your needs. We offer an assortment of the best 
+          artisan coffees from around the globe delivered fresh to your door.
+        </p>
+      </div>
+    </section>
 
-  01
-  Pick your coffee
-  Select from our evolving range of artisan coffees. Our beans are ethically
-  sourced and we pay fair prices for them. There's new coffees in all profiles
-  every month for you to try out.
+
+    <section class="tutorial flow-medium border-radius">
+      <div class="container">
+        <div class="tutorial__column--wrapper flex">
+          <div class="col flow">
+            <div class="tutorial__art"></div>
+            <h2 class="ff-fraunces fs-900 text-orange">01</h2>
+            <h3 class="ff-fraunces fs-600-lighter">Pick your coffee</h3>
+            <p class="ff-barlow fs-400-lighter text-greyBlue">Select from our evolving range of artisan coffees. Our beans are ethically
+              sourced and we pay fair prices for them. There are new coffees in all profiles
+              every month for you to try out.
+            </p>
+          </div>
+          <div class="col flow">
+            <div class="tutorial__art"></div>
+            <h2 class="ff-fraunces fs-900 text-orange">02</h2>
+            <h3 class="ff-fraunces fs-600-lighter">Choose the frequency</h3>
+            <p class="ff-barlow fs-400-lighter text-greyBlue">Customize your order frequency, quantity, even your roast style and grind type.
+              Pause, skip or cancel your subscription with no commitment through our online portal.
+            </p>
+          </div>
+          <div class="col flow">
+            <div class="tutorial__art--noline"></div>
+            <h2 class="ff-fraunces fs-900 text-orange">03</h2>
+            <h3 class="ff-fraunces fs-600-lighter">Receive and enjoy!</h3>
+            <p class="ff-barlow fs-400-lighter text-greyBlue">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+              world-class coffees curated to provide a distinct tasting experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- survey -->
+<!-- grind aside -->
+  <section class="survey container flex">
+    <div class="survey__aside flow">
+      <div aria-selected="false" class="survey__aside--preferences flex">
+        <h2 class="ff-fraunces text-darkCyan">01</h2>
+        <p class="fs-500-static ff-fraunces text-greyBlue">Preferences</p>
+      </div>
+
+      <div aria-selected="false" class="survey__aside--type flex">
+        <h2 class="ff-fraunces text-darkCyan">02</h2>
+        <p class="fs-500-static ff-fraunces text-greyBlue">Bean Type</p>
+      </div>
+
+      <div aria-selected="false" class="survey__aside--quantity flex">
+        <h2 class="ff-fraunces text-darkCyan">03</h2>
+        <p class="fs-500-static ff-fraunces text-greyBlue">Quantity</p>
+      </div>
+
+      <div aria-selected="false" class="survey__aside--grind flex">
+        <h2 class="ff-fraunces text-darkCyan">04</h2>
+        <p class="fs-500-static ff-fraunces text-greyBlue">Grind Option</p>
+      </div>
+
+      <div aria-selected="false" class="survey__aside--frequency flex">
+        <h2 class="ff-fraunces text-darkCyan">05</h2>
+        <p class="fs-500-static ff-fraunces text-greyBlue">Deliveries</p>
+      </div>
+    </div>
+<!-- survey options -->
+    <div class="survey__wrapper flow-medium"">
+            <div class="accordion flow">
+                <div aria-selected="false" class="accordion__title flex">
+                  
+                    <h2 class="fs-500 ff-fraunces text-black">How do you drink your coffee?</h2>
+                    <button aria-selected="false" class="arrow-button"></button>
+                </div>
+            
+                <div class="preferences card__wrapper flex" id="preferences">
+                    <div aria-selected="false" aria-label="preferences" class="card bg-darkCream ff-fraunces" id="Capsules">
+                        <div class="card__text container flow">
+                            <h3 class="fs-500-static ff-fraunces">Capsules</h3>
+                            <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm.
+                            </p>
+                        </div>
+                    </div>
+                    <div aria-selected="false" aria-label="preferences" class="card bg-darkCream ff-fraunces" id="Filter">
+                        <div class="card__text container flow">
+                            <h3 class="fs-500-static ff-fraunces">Filter</h3>
+                            <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm.
+                            </p>
+                        </div>
+                    </div>
+                    <div aria-selected="false" aria-label="preferences" class="card bg-darkCream ff-fraunces" id="Expresso">
+                        <div class="card__text container flow">
+                            <h3 class="fs-500-static ff-fraunces">Expresso</h3>
+                            <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion flow">
+              <div aria-selected="false" class="accordion__title flex">
+                  <h2 class="fs-500 ff-fraunces text-black">What type of coffee?</h2>
+                  <button aria-selected="false" class="arrow-button"></button>
+              </div>
+          
+              <div class="type card__wrapper flex" id="type">
+                  <div aria-selected="false" aria-label="type" class="card bg-darkCream ff-fraunces" id="Single Origin">
+                      <div class="card__text container flow">
+                          <h3 class="fs-500-static ff-fraunces">Single Origin</h3>
+                          <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm.
+                          </p>
+                      </div>
+                  </div>
+                  <div aria-selected="false" aria-label="type" class="card bg-darkCream ff-fraunces" id="Decaf">
+                      <div class="card__text container flow">
+                          <h3 class="fs-500-static ff-fraunces">Decaf</h3>
+                          <p class="fs-400-static ff-barlow text-greyBlue">Just like regular coffee, except the caffeine has been removed.
+                          </p>
+                      </div>
+                  </div>
+                  <div aria-selected="false" aria-label="type" class="card bg-darkCream ff-fraunces" id="Blended">
+                      <div class="card__text container flow">
+                          <h3 class="fs-500-static ff-fraunces">Blended</h3>
+                          <p class="fs-400-static ff-barlow text-greyBlue">Combination of two or three dark roasted beans of organic coffees.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="accordion flow">
+            <div aria-selected="false" class="accordion__title flex">
+                <h2 class="fs-500 ff-fraunces text-black">How much would you like?</h2>
+                <button aria-selected="false" class="arrow-button"></button>
+            </div>
+        
+            <div class="quantity card__wrapper flex" id="quantity">
+                <div aria-selected="false" aria-label="quantity" class="card bg-darkCream ff-fraunces" id="250g">
+                    <div class="card__text container flow">
+                        <h3 class="fs-500-static ff-fraunces">250g</h3>
+                        <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm.
+                        </p>
+                    </div>
+                </div>
+                <div aria-selected="false" aria-label="quantity" class="card bg-darkCream ff-fraunces" id="500g">
+                    <div class="card__text container flow">
+                        <h3 class="fs-500-static ff-fraunces">500g</h3>
+                        <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm.
+                        </p>
+                    </div>
+                </div>
+                <div aria-selected="false" aria-label="quantity" class="card bg-darkCream ff-fraunces" id="1000g">
+                    <div class="card__text container flow">
+                        <h3 class="fs-500-static ff-fraunces">1000g</h3>
+                        <p class="fs-400-static ff-barlow text-greyBlue">Distinct, high quality coffee from a specific family-owned farm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion flow ">
+          <div aria-selected="false" class="accordion__title flex">
+              <h2 class="fs-500 ff-fraunces text-black">Want us to grind them?</h2>
+              <button aria-selected="false" class="arrow-button"></button>
+          </div>
+      
+          <div class="grind card__wrapper flex" id="grind">
+              <div aria-selected="false" aria-label="grind" class="card bg-darkCream ff-fraunces" id="Wholebean">
+                  <div class="card__text container flow">
+                      <h3 class="fs-500-static ff-fraunces">Wholebean</h3>
+                      <p class="fs-400-static ff-barlow text-greyBlue">Best choice if you cherish the full sensory experience.
+                      </p>
+                  </div>
+              </div>
+              <div aria-selected="false" aria-label="grind" class="card bg-darkCream ff-fraunces" id="Filter">
+                  <div class="card__text container flow">
+                      <h3 class="fs-500-static ff-fraunces">Filter</h3>
+                      <p class="fs-400-static ff-barlow text-greyBlue">For drip or pour-over coffee methods such as V60 or Aeropress.
+                      </p>
+                  </div>
+              </div>
+              <div aria-selected="false" aria-label="grind" class="card bg-darkCream ff-fraunces" id="Cafetiére">
+                  <div class="card__text container flow">
+                      <h3 class="fs-500-static ff-fraunces">Cafetiére</h3>
+                      <p class="fs-400-static ff-barlow text-greyBlue"> Course ground beans specially suited for french press coffee.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="accordion flow">
+        <div aria-selected="false" class="accordion__title flex">
+            <h2 class="fs-500 ff-fraunces text-black">How often should we deliver?</h2>
+            <button aria-selected="false" class="arrow-button"></button>
+        </div>
+    
+        <div class="frequency card__wrapper flex" id="frequency">
+            <div aria-selected="false" aria-label="frequency" class="card bg-darkCream ff-fraunces" id="Every week">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Every week</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">$7.20 per shipment. Includes free first-class shipping.
+                    </p>
+                </div>
+            </div>
+            <div aria-selected="false" aria-label="frequency" class="card bg-darkCream ff-fraunces" id="Every 2 weeks">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Every 2 weeks</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">$9.60 per shipment. Includes free priority shipping.
+                </div>
+            </div>
+            <div aria-selected="false" aria-label="frequency" class="card bg-darkCream ff-fraunces" id="Every month">
+                <div class="card__text container flow">
+                    <h3 class="fs-500-static ff-fraunces">Every month</h3>
+                    <p class="fs-400-static ff-barlow text-greyBlue">$12.00 per shipment. Includes free priority shipping.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary flow-medium">
+      <div class="order__summary bg-darkBlue">
+        <div class="container flow">
+            <p class="ff-barlow text-white">order summary</p>
+            <h2 class="order text-white ff-fraunces fs-500-static">“I drink my coffee as <span>_____</span>, with a <span>_____</span> type of bean.
+                <span>_____</span> ground ala <span>_____</span>, sent to me <span>_____</span>.”</h2>
+        </div>
+    </div>
+   </div>
+
+  <div class="summary__button flex">
+    <button aria-selected="false" class="order-button button ff-fraunces fs-button bg-darkCyan text-cream">Create my plan!</button>
+  </div>
+  </div>
+  </section>
+
+  <section class="end__screen">
+    <div class="end__screen--card container">
+
+      <div class="end__screen--title  bg-greyBlue">
+        <h2 class="ff-fraunces fs-700 text-white container">Order Summary</h2>
+      </div>
+
+      <div class="summary bg-white">
+        <div class="order__summary">
+          <div class="container flow">
+              <h2 class="order text-grey ff-fraunces fs-500-static">“I drink my coffee as <span>_____</span>, with a <span>_____</span> type of bean.
+                  <span>_____</span> ground ala <span>_____</span>, sent to me <span>_____</span>.”</h2>
+          </div>
+        </div>
+
+        <div class="end__screen--information container flow flex">
+          <p class="ff-barlow fs-400-lighter text-greyBlue">Is this correct? You can proceed to checkout or go back to plan selection if something is off. 
+            Subscription discount codes can also be redeemed at the checkout.</p>
+            <div class="end__button">
+              <a href="./index.html" class="ff-fraunces button fs-button bg-darkCyan text-cream">Checkout - $14.00 / mo</a>
+            </div>
+        </div> 
+     </div>
+
+    </div>
+
+    
+  </section>
   
-  02
-  Choose the frequency
-  Customize your order frequency, quantity, even your roast style and grind type.
-  Pause, skip or cancel your subscription with no commitment through our online portal.
-  
-  03
-  Receive and enjoy!
-  We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-  world-class coffees curated to provide a distinct tasting experience.
-
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
-
-  How do you drink your coffee?
-
-  Capsule
-  Compatible with Nespresso systems and similar brewers
-
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
-
-  Espresso
-  Dense and finely ground beans for an intense, flavorful experience
-
-  What type of coffee?
-
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
-
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
-  sent to me _____.”
-
-  Create my plan!
-
-  <!-- Modal -->
-  Order Summary
-
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
-
-  $_____/month
-
-  Checkout
-  <!-- End modal -->
-
-  Home
-  About us
-  Create your plan
+  </main>
+  <!-- adds faded background with end menu -->
+  <div class="overlay"></div> 
+  <footer class="bg-darkBlue container">
+       <!-- nav -->
+         <div class="container">
+           <nav class="secondary__nav flex flow">
+              <div class="secondary__nav--primary flex">
+                <img src="./assets/shared/desktop/logo-white.svg" alt="coffee roaster logo">
+                <ul class="flow">
+                  <li class="ff-barlow fs-300 text-grey uppercase"><a href="./index.html" class="text-grey">Home</a></li>
+                  <li class="ff-barlow fs-300 text-grey uppercase"><a href="./about.html" class="text-grey">About us</a></li>
+                  <li class="ff-barlow fs-300 text-grey uppercase"><a href="#" class="text-grey">Create your plan</a></li>
+                </ul>
+              </div>
+              <div class="socials flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#FEFCF7" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path fill="#FEFCF7" d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#FEFCF7" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+            </nav>
+         </div>
+  </footer>
 </body>
-
 </html>

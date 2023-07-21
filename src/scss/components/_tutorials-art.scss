@@ -8,9 +8,10 @@
         position: absolute;
         background: hsl(var(--clr-paleOrange));
         height: 3px;
-        width: 28%;
-        max-width: 450px;
+        width: 31%;
+        max-width: 443px;
         transform: translateX(5px);
+        margin-left: 12px;
         transform: translateY(10px);
         z-index: -1;
     }

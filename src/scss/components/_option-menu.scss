@@ -53,6 +53,7 @@
 
 
 @media(max-width:$br-small){
+    
     .card__wrapper{
      flex-direction: column;
     }
@@ -66,7 +67,7 @@
     }
  }
 
- @media(min-width:$br-medium){
+ @media(min-width:$br-small){
     .card{
         max-width: 228px;
     }

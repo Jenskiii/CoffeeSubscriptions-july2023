@@ -1,1 +1,146 @@
 @use '../abstracts' as *;
+/////////////////
+//    plan    //
+///////////////
+.plan{
+    .tutorial{
+        max-width: 1440px;
+        padding-block: 80px;
+        background-color: hsl(var(--clr-darkBlue));
+        p,h3{
+            color: hsl(var(--clr-cream));
+        }
+    .tutorial__art,
+    .tutorial__art--noline{
+        background-color: hsl(var(--clr-darkBlue));
+    } 
+    ::after{
+        z-index: 0;
+    }
+
+    @media(min-width: $br-small){
+        &{
+            padding-block: 96px;
+        }
+    }
+    }
+}
+/////////////////
+//  survey    //
+///////////////
+.survey{
+   justify-content: center;
+}
+
+.survey__wrapper{
+    max-width: 45.625rem;
+}
+
+.survey__aside{
+    display: none;
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    div[aria-selected="false" ]{
+        p,h2{
+            color: hsla(var(--clr-grey) / .5);
+        }
+    }
+}
+
+.survey__aside div:not(:last-child){
+  border-bottom:solid 1px hsla(var(--clr-grey) / .25);
+}
+
+
+
+@media(min-width: $br-medium){
+    .survey{
+        justify-content: space-between;
+     }
+
+     .survey__aside{
+        display: block;
+    }
+}
+
+/////////////////
+//  summary   //
+///////////////
+.summary__button{
+    width: 100%;
+    justify-content: center;
+
+}
+
+@media(min-width: $br-medium){
+    .summary__button{
+        justify-content: flex-end;
+    }
+}
+
+/////////////////
+// end-screen //
+///////////////
+.end__screen{
+    display: none;
+    top: 10%;
+    left: 50%;
+    translate: -50%;
+    position: absolute;
+    z-index: 3010;
+    p{
+        opacity: .8;
+        max-width: 85%;
+    }
+ 
+    .summary{
+        border-radius: 0 0 8px 8px;
+    }
+
+    .order__summary{
+        border-radius: 0;
+    }
+}
+
+.end__screen--card{
+    max-width: 33.75rem;
+}
+
+.end__screen--title{
+    border-radius: 8px 8px 0 0;
+    padding-block: 28px;
+}
+
+.end__screen--information{
+    flex-direction: column;
+    padding-bottom: 35px;
+    border-radius: 0 0 8px 8px;
+}
+.end__button{
+    align-self: center;
+}
+
+
+@media(min-width: $br-small){
+.end__screen{
+    .end__screen--information,
+    .end__screen--information,
+    .order__summary{
+        --container:80%;
+    }
+}
+
+    .end__screen--title{
+        padding-block: 45px;
+        h2{
+            margin-left: 10%;
+        }
+    }
+}
+
+// hide/show end screen with js
+.end__screen.active{
+    display: block;
+}
